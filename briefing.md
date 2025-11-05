@@ -246,7 +246,7 @@ git checkout -b feature/styles
 
 **3. Instala y configura PrimeNG**
 
-**📖 Recursos:**
+**Recursos:**
 - [PrimeNG Installation](https://primeng.org/installation)
 - [PrimeNG + Tailwind Integration](https://primeng.org/tailwind)
 
@@ -413,8 +413,6 @@ Antes de hacer merge, revisa tu código:
 
 **Recurso:** [Clean Code principles](https://github.com/ryanmcdermott/clean-code-javascript)
 
----
-
 ### Iteración 4: Drag and Drop con Angular CDK
 
 **Conceptos clave:**
@@ -445,8 +443,6 @@ npm install @angular/cdk
 
 **Recurso:** [Angular CDK Overview](https://material.angular.dev/cdk/categories)
 
----
-
 **3. Importa el módulo Drag-Drop**
 
 **Desafío:** Importar correctamente en un componente standalone
@@ -476,8 +472,6 @@ npm install @angular/cdk
 **Recursos:**
 - [CDK Drag Drop API](https://material.angular.dev/cdk/drag-drop/api)
 - Ejemplos en la documentación oficial
-
----
 
 **5. Maneja el estado después del reordenamiento**
 
