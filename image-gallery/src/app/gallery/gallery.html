@@ -1,6 +1,6 @@
-<h2>Galeria d'imatges</h2>
+<h2 class="text-3xl font-bold text-center mt-8 mb-4">Galeria d'imatges</h2>
 
-<div>
+<div class="flex flex-wrap gap-6 justify-center p-6">
     @for (image of imageGallery; track image.id; let i = $index) {
         <app-image-item 
         [image]="image"
