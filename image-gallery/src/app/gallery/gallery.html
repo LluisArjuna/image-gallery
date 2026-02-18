@@ -1,8 +1,11 @@
 <h2>Galeria d'imatges</h2>
 
 <div>
-    @for (image of imageGallery; track image.id) {
-        <app-image-item [image]="image"></app-image-item>
+    @for (image of imageGallery; track image.id; let i = $index) {
+        <app-image-item 
+        [image]="image"
+        [isFeatured]="i === 0">
+        </app-image-item>
     }
 </div>
 
