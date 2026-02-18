@@ -1,9 +1,10 @@
-import { Component } from '@angular/core';
+import { Component, signal } from '@angular/core';
+import { ImageItem } from '../image-item/image-item';
 import { Image } from '../interfaces/image-interface';
 
 @Component({
   selector: 'app-gallery',
-  imports: [],
+  imports: [ImageItem],
   templateUrl: './gallery.html',
   styleUrl: './gallery.css',
 })
@@ -22,5 +23,5 @@ export class Gallery {
       id: '3',
       src: 'https://picsum.photos/id/239/200/300',
       alt: 'Image of a hand holding a Dandelion.'
-    }]
+    }];
 }
