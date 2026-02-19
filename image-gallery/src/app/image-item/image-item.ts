@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, input, signal } from '@angular/core';
+import { ChangeDetectionStrategy, Component, input, output, signal } from '@angular/core';
 import { Image } from '../interfaces/image-interface';
 
 @Component({
@@ -11,4 +11,5 @@ import { Image } from '../interfaces/image-interface';
 export class ImageItem {
   image = input.required<Image>()
   isFeatured = input<boolean>(false);
+  deleteImage = output <string >(); // Emetrà l'id de la imatge a eliminar
 }
