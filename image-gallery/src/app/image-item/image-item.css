@@ -1,4 +1,5 @@
 .featured {
     transform: scale(1.10);
-    border: 3px solid black;
+    border: 2px solid black;
+    grid-row: span 2 / span 2;
 }
