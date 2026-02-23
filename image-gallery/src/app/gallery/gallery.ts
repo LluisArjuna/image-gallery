@@ -3,12 +3,12 @@ import { ImageItem } from '../image-item/image-item';
 import { Image } from '../interfaces/image-interface';
 
 import { CommonModule } from '@angular/common';
-import { CdkDrag, CdkDropList, CdkDropListGroup, moveItemInArray } from '@angular/cdk/drag-drop';
+import { CdkDrag, CdkDragDrop, CdkDropList, CdkDropListGroup, moveItemInArray } from '@angular/cdk/drag-drop';
 
 
 @Component({
   selector: 'app-gallery',
-  imports: [CommonModule, ImageItem, CdkDrag, CdkDropList, CdkDropListGroup],
+  imports: [CommonModule, ImageItem, CdkDrag, CdkDropList],
   templateUrl: './gallery.html',
   styleUrl: './gallery.css',
 })
@@ -62,5 +62,13 @@ export class Gallery {
     removeImage(id: string){
       window.confirm("Estàs segur que vols eliminar aquesta imatge?");
       this.imageGallery.update(images => images.filter(image => image.id !== id));
+    }
+
+    drop(event: CdkDragDrop<Image[]>) {
+      this.imageGallery.update(currentImages => {
+         moveItemInArray(currentImages, event.previousIndex, event.currentIndex);
+         return [...currentImages];
+      });
+      this.featuredImageId.set(this.imageGallery()[0]?.id || '');
     }
 }
