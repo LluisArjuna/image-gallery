@@ -8,7 +8,7 @@ import { CdkDrag, CdkDropList, CdkDropListGroup, moveItemInArray } from '@angula
 
 @Component({
   selector: 'app-gallery',
-  imports: [CommonModule, ImageItem, CdkDrag, CdkDropList, CdkDropListGroup, moveItemInArray],
+  imports: [CommonModule, ImageItem, CdkDrag, CdkDropList, CdkDropListGroup],
   templateUrl: './gallery.html',
   styleUrl: './gallery.css',
 })
