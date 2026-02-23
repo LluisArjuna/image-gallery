@@ -2,10 +2,11 @@
 
 <div class="container mx-auto max-w-5xl px-4">
     <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-6 ">
-        @for (image of imageGallery; track image.id; let i = $index) {
+        @for (image of imageGallery(); track image.id) {
             <app-image-item 
             [image]="image"
-            [isFeatured]="i === 0">
+            (deleteImage)="removeImage(image.id)"
+            [isFeatured]="image.id === featuredImageId()">
             </app-image-item>
         }
     </div>
