@@ -2,9 +2,13 @@ import { Component, signal } from '@angular/core';
 import { ImageItem } from '../image-item/image-item';
 import { Image } from '../interfaces/image-interface';
 
+import { CommonModule } from '@angular/common';
+import { CdkDrag, CdkDropList, CdkDropListGroup, moveItemInArray } from '@angular/cdk/drag-drop';
+
+
 @Component({
   selector: 'app-gallery',
-  imports: [ImageItem],
+  imports: [CommonModule, ImageItem, CdkDrag, CdkDropList, CdkDropListGroup, moveItemInArray],
   templateUrl: './gallery.html',
   styleUrl: './gallery.css',
 })
